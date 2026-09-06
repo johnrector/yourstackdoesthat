@@ -1,0 +1,35 @@
+# yourstackdoesthat.com
+# Static files only. The site/ folder is generated from content/, pages/
+# and static/ by build.py (Python 3, standard library). Netlify runs it on
+# deploy; you can also run it on a laptop and upload site/ directly.
+
+[build]
+  publish = "site"
+  command = "python3 build.py"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
+    Content-Security-Policy = "default-src 'none'; style-src 'self'; img-src 'self' data:; script-src 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-ancestors 'none'"
+
+[[headers]]
+  for = "/feed.xml"
+  [headers.values]
+    Content-Type = "application/rss+xml; charset=utf-8"
+
+[[headers]]
+  for = "/feed.json"
+  [headers.values]
+    Content-Type = "application/feed+json; charset=utf-8"
+
+[[headers]]
+  for = "/does.json"
+  [headers.values]
+    Content-Type = "application/json; charset=utf-8"
+
+[[headers]]
+  for = "/ledger.json"
+  [headers.values]
+    Content-Type = "application/json; charset=utf-8"

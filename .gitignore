@@ -1,0 +1,5 @@
+.netlify
+.DS_Store
+__pycache__/
+_seed_does.txt
+site/
