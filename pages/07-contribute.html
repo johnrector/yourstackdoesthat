@@ -1,0 +1,114 @@
+---
+path: /contribute/
+type: article
+title: Contribute
+description: How to add a Does entry or a Cancel Ledger line. A public repository, plain markdown files, pull requests welcome, no account on this site required.
+date: 2026-09-06
+---
+<p class="kicker">Contribute</p>
+<h1>Add an entry. No account here required.</h1>
+
+<p class="lede">Everything on this site is a plain text file in a public repository. Add a Does entry or a Cancel Ledger line either way below. Whatever you contribute is released to the public domain under CC0, the same as everything else here. Do not contribute anything you are not willing to give away.</p>
+
+<h2>The repository</h2>
+
+<p>The site lives at <a href="{{repo}}">{{repo}}</a>. Entries are markdown files, one per entry. Open a pull request and it will be read by a person. There is a CONTRIBUTING file in the repository with the format, and the existing entries are the best examples.</p>
+
+<p>A Does entry looks like this:</p>
+
+<pre><code>---
+title: Know when a bill is about to be late
+domain: money
+added: 2026-09-06
+uses: connector, scheduled task
+setup: A connector to the bank, or statements forwarded to a folder.
+---
+## The need
+...
+
+## What you used to buy
+...
+
+## Your stack does that
+...
+
+## How, in plain terms
+...</code></pre>
+
+<p>A Cancel Ledger line looks like this:</p>
+
+<pre><code>---
+replaced: A social media scheduler
+cost: $15 a month
+replaced_by: A scheduled task and a connector to the account
+result: replaced
+date: 2026-09-06
+---
+One or two sentences, optional.</code></pre>
+
+<h2>The rules for entries</h2>
+
+<ul>
+<li>Provider-neutral. Do not name a frontier stack as the one that does it. If only one of them can do it today, say "in some stacks" and describe what is needed.</li>
+<li>Honest about setup. If it took you a weekend, say so. "With setup" is a real answer.</li>
+<li>Categories, not brands, in the ledger. "A grammar checker," not the company. A product that lost to a skill file did nothing wrong.</li>
+<li>No selling. Nothing that links to a thing for sale, including your own.</li>
+<li>Short declarative sentences. No hype.</li>
+</ul>
+
+<h2>Or send it here</h2>
+
+<p>If you would rather not use the repository, use one of these. They go to the host of this site and nowhere else; no third-party form service is involved. A person reads them and turns the good ones into files. Nothing you type is used for anything but that. You do not have to give a name or an address, and there is no field for one.</p>
+
+<form name="does-entry" method="POST" action="/contribute/thanks/" data-netlify="true" netlify-honeypot="website" id="does">
+<input type="hidden" name="form-name" value="does-entry">
+<fieldset>
+<legend>A Does entry</legend>
+<p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+<label for="d-title">Title</label>
+<input id="d-title" name="title" type="text" required maxlength="120">
+<label for="d-domain">Domain</label>
+<select id="d-domain" name="domain" required>
+<option value="household">Household</option>
+<option value="money">Money</option>
+<option value="health">Health</option>
+<option value="work">Work</option>
+<option value="school">School</option>
+<option value="small-business">Small business</option>
+</select>
+<label for="d-need">The need</label>
+<textarea id="d-need" name="need" required maxlength="1000"></textarea>
+<label for="d-bought">What you used to buy</label>
+<textarea id="d-bought" name="bought" required maxlength="1000"></textarea>
+<label for="d-does">Your stack does that</label>
+<textarea id="d-does" name="does" required maxlength="1500"></textarea>
+<label for="d-how">How, in plain terms</label>
+<textarea id="d-how" name="how" required maxlength="1500"></textarea>
+<p class="hint">Name the part of the stack: a connector, a skill, a scheduled task, or a combination. Say what still requires setup.</p>
+<button type="submit">Send the entry</button>
+</fieldset>
+</form>
+
+<form name="ledger-line" method="POST" action="/contribute/thanks/" data-netlify="true" netlify-honeypot="website" id="ledger">
+<input type="hidden" name="form-name" value="ledger-line">
+<fieldset>
+<legend>A Cancel Ledger line</legend>
+<p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+<label for="l-replaced">What it was</label>
+<input id="l-replaced" name="replaced" type="text" required maxlength="120" placeholder="A category, not a brand">
+<label for="l-cost">What it cost</label>
+<input id="l-cost" name="cost" type="text" maxlength="40" placeholder="$12 a month">
+<label for="l-result">Result</label>
+<select id="l-result" name="result" required>
+<option value="replaced">Replaced</option>
+<option value="kept">Kept</option>
+</select>
+<label for="l-by">Replaced by, or kept because</label>
+<input id="l-by" name="replaced_by" type="text" required maxlength="200">
+<label for="l-note">Note, optional</label>
+<textarea id="l-note" name="note" maxlength="600"></textarea>
+<button type="submit">Send the line</button>
+</fieldset>
+</form>
+
+<p class="small">Submissions are stored by the host until a person reviews them, then deleted. Anything that names a person or a company is edited or dropped before it is merged. Anything that sells is dropped.</p>

@@ -1,0 +1,112 @@
+---
+path: /stack-test/
+type: article
+title: The Stack Test
+description: Five questions to run before buying any app or subscription. The answer is one of two sentences.
+date: 2026-09-06
+---
+<p class="kicker">The Stack Test</p>
+<h1>Run this before you buy anything with a monthly price.</h1>
+
+<p class="lede">Five questions. Takes a minute. The result is one of two sentences: <strong>your stack does that</strong>, or <strong>this is a record; keep it</strong>. Print it if you like. It works on paper.</p>
+
+<form id="test-form" action="#verdict" method="get">
+<ol class="test">
+<li>
+<p class="q">Could my stack do this with a connector?</p>
+<p class="why">A connector is a door into a record you already have: your mail, your calendar, your bank, your files. If the thing you are about to buy mostly reads or writes a record you already own, the door is the product, not the app.</p>
+<div class="choice">
+<label><input type="radio" name="q1" value="yes"> Yes</label>
+<label><input type="radio" name="q1" value="maybe"> With setup</label>
+<label><input type="radio" name="q1" value="no"> No</label>
+</div>
+</li>
+<li>
+<p class="q">Could my stack do this with a skill?</p>
+<p class="why">A skill is a way of doing something, learned once. Checking a draft, formatting an invoice, planning a week of meals, turning a PDF into a table. If you could describe the job in a page of plain instructions, it is a skill.</p>
+<div class="choice">
+<label><input type="radio" name="q2" value="yes"> Yes</label>
+<label><input type="radio" name="q2" value="maybe"> With setup</label>
+<label><input type="radio" name="q2" value="no"> No</label>
+</div>
+</li>
+<li>
+<p class="q">Could my stack do this with a scheduled task?</p>
+<p class="why">Most subscriptions are really a reminder with a login. If the value is "check this every morning and tell me when something changes," that is a scheduled task. Invisible, always on, never prompted.</p>
+<div class="choice">
+<label><input type="radio" name="q3" value="yes"> Yes</label>
+<label><input type="radio" name="q3" value="maybe"> With setup</label>
+<label><input type="radio" name="q3" value="no"> No</label>
+</div>
+</li>
+<li>
+<p class="q">Does this need to be a separate relationship with a company?</p>
+<p class="why">Some things do. Your bank holds your money. Your pharmacy holds your prescriptions. Your insurer holds your policy. A separate relationship is justified when the company holds something real on your behalf, not when it holds a feature.</p>
+<div class="choice">
+<label><input type="radio" name="q4" value="no"> No</label>
+<label><input type="radio" name="q4" value="yes"> Yes</label>
+</div>
+</li>
+<li>
+<p class="q">Is this a record I need, or a product I don't?</p>
+<p class="why">A record is where a fact lives: the ledger, the vault, the photo library, the medical chart. A product is a way of looking at facts that live somewhere else. Records earn a bill. Products earn a skill.</p>
+<div class="choice">
+<label><input type="radio" name="q5" value="product"> A product</label>
+<label><input type="radio" name="q5" value="record"> A record</label>
+</div>
+</li>
+</ol>
+<button type="submit">Read the result</button>
+</form>
+
+<div class="verdict" id="verdict">
+<p class="label">How to read it</p>
+<p>If question four is <strong>no</strong> and question five is <strong>a product</strong>, and any of the first three is <strong>yes</strong> or <strong>with setup</strong>, the result is:</p>
+<p class="out">Your stack does that.</p>
+<p>If question five is <strong>a record</strong>, or question four is <strong>yes</strong>, the result is:</p>
+<p class="out">This is a record; keep it.</p>
+<p>If the first three are all <strong>no</strong> and it is still a product, you have found something the stack cannot do yet. Those are rare and worth writing down. <a href="/contribute/">Tell us</a>.</p>
+<p id="live-verdict" hidden></p>
+</div>
+
+<h2>Two notes on honesty</h2>
+
+<p>"With setup" is a real answer, not a soft yes. It means the entry works but somebody has to stand it up: a connector to authorize, a skill to write, a task to schedule and then check for a few weeks. If you will not do the setup, the app is still the honest choice for you this month. Come back when you will.</p>
+
+<p>"Keep it" is not a loss. A record you keep can still be reached by your stack through a connector, which is usually the better outcome: the bank stays the bank, and the budgeting app in between goes away. Some things that pass as records are worth a second look. A password vault is a record and a security boundary; keep it. A notes app is usually a product that happens to hold your notes; the notes are the record, and they can live in a folder.</p>
+
+<p>The first three results of this test, run on real subscriptions the day the site launched, are the first three lines of <a href="/ledger/">the Cancel Ledger</a>. One of them says keep.</p>
+
+<script>
+/* Progressive enhancement only. The page reads correctly without this. */
+(function () {
+  var form = document.getElementById('test-form');
+  var out = document.getElementById('live-verdict');
+  if (!form || !out) return;
+  function verdict() {
+    var v = {};
+    ['q1','q2','q3','q4','q5'].forEach(function (n) {
+      var el = form.querySelector('input[name="' + n + '"]:checked');
+      v[n] = el ? el.value : null;
+    });
+    if (!v.q4 || !v.q5) return null;
+    if (v.q5 === 'record' || v.q4 === 'yes') return 'This is a record; keep it.';
+    var can = ['q1','q2','q3'].some(function (n) { return v[n] === 'yes' || v[n] === 'maybe'; });
+    var allNo = ['q1','q2','q3'].every(function (n) { return v[n] === 'no'; });
+    if (can) {
+      var setup = ['q1','q2','q3'].some(function (n) { return v[n] === 'maybe'; }) &&
+                  !['q1','q2','q3'].some(function (n) { return v[n] === 'yes'; });
+      return 'Your stack does that.' + (setup ? ' With setup.' : '');
+    }
+    if (allNo) return 'Your stack cannot do that yet. Write it down.';
+    return null;
+  }
+  function show() {
+    var r = verdict();
+    if (r) { out.textContent = 'Your result: ' + r; out.hidden = false; out.className = 'out'; }
+    else { out.hidden = true; }
+  }
+  form.addEventListener('change', show);
+  form.addEventListener('submit', function (e) { show(); if (out.hidden) return; e.preventDefault(); out.scrollIntoView(); });
+})();
+</script>

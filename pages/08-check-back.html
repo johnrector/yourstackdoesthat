@@ -1,0 +1,43 @@
+---
+path: /check-back/
+type: article
+title: Have your stack check back
+description: No newsletter. A machine-readable feed and a one-paragraph instruction to give your stack a scheduled task to read it once a week.
+date: 2026-09-06
+---
+<p class="kicker">Have your stack check back</p>
+<h1>There is no newsletter. There is a feed.</h1>
+
+<p class="lede">This site will not ask for your email address. It is the one thing a site like this must not do. Instead, it publishes what is new in a form your stack can read, and asks you to do one on-brand thing: give your stack a scheduled task.</p>
+
+<h2>The instruction</h2>
+
+<blockquote><p>Give your stack a scheduled task to read <a href="{{base}}/feed.xml">{{base}}/feed.xml</a> once a week and tell you what's new. That is the whole thing. It runs on Monday morning, it reads the feed, it compares it to what it read last week, and it leaves you a short note if anything was added. If nothing was added, it says nothing.</p></blockquote>
+
+<p>Here is that instruction in the words you might give your stack. Copy it, change the day, and paste it wherever your stack takes scheduled tasks.</p>
+
+<pre>Every Monday at 7 a.m., fetch https://yourstackdoesthat.com/feed.xml.
+Compare the items to the ones you saw last time.
+If there are new Does entries or Cancel Ledger lines, summarize each
+in one sentence and tell me. If there is nothing new, do nothing.</pre>
+
+<h2>What is published</h2>
+
+<dl class="plain">
+<dt><a href="/feed.xml">/feed.xml</a></dt>
+<dd>RSS. Every Does entry and every Cancel Ledger line, newest first, with the full text in each item. Any feed reader can read it too.</dd>
+<dt><a href="/feed.json">/feed.json</a></dt>
+<dd>The same feed in JSON Feed format, for stacks that prefer it.</dd>
+<dt><a href="/does.json">/does.json</a></dt>
+<dd>Every Does entry as structured data: need, bought, does, how, the parts of the stack it uses, and the date it was added. This is the file to read if you want your stack to know the whole catalog.</dd>
+<dt><a href="/ledger.json">/ledger.json</a></dt>
+<dd>Every Cancel Ledger line as structured data.</dd>
+<dt><a href="/sitemap.xml">/sitemap.xml</a></dt>
+<dd>Every page. Each page also carries its full text as structured data, so a stack that does not render pages can still read them.</dd>
+</dl>
+
+<h2>Why this way</h2>
+
+<p>A newsletter is a subscription. It makes you a name on a list somebody owns, and it puts this site in your inbox on its schedule, not yours. A feed is the opposite. Nobody knows you read it. It arrives when your stack asks for it. You can stop without unsubscribing from anything. If the site ever goes quiet, your stack simply has nothing to report. That is the right relationship between a site and a person, and it is the only way this site will ask anyone to return.</p>
+
+<p>If your stack cannot run scheduled tasks yet, a feed reader does the same job. Set it to check weekly.</p>
