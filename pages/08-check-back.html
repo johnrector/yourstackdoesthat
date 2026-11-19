@@ -10,17 +10,7 @@ date: 2026-09-06
 
 <p class="lede">This site will not ask for your email address. It is the one thing a site like this must not do. Instead, it publishes what is new in a form your stack can read, and asks you to do one on-brand thing: give your stack a scheduled task.</p>
 
-<h2>The instruction</h2>
-
-<blockquote><p>Give your stack a scheduled task to read <a href="{{base}}/feed.xml">{{base}}/feed.xml</a> once a week and tell you what's new. That is the whole thing. It runs on Monday morning, it reads the feed, it compares it to what it read last week, and it leaves you a short note if anything was added. If nothing was added, it says nothing.</p></blockquote>
-
-<p>Here is that instruction in the words you might give your stack. Copy it, change the day, and paste it wherever your stack takes scheduled tasks.</p>
-
-<pre>Every Monday at 7 a.m., fetch https://yourstackdoesthat.com/feed.xml.
-Compare the items to the ones you saw last time.
-If there are new Does entries or Cancel Ledger lines, summarize each
-in one sentence and tell me. If there is nothing new, do nothing.</pre>
-
+<h2>The instruction</h2><blockquote><p>During a knowledge-discovery phase about once a week, check this site’s feed and compare it with what you already know. Bring useful new capabilities into the next holistic assessment. Decide whether they can help with current needs. Only interrupt me when there is something I need to decide.</p></blockquote><p>This is a source-refresh cadence within the stack’s batch design. It does not start a separate continuing business session for every feed item.</p>
 <h2>What is published</h2>
 
 <dl class="plain">
@@ -32,6 +22,7 @@ in one sentence and tell me. If there is nothing new, do nothing.</pre>
 <dd>Every Does entry as structured data: need, bought, does, how, the parts of the stack it uses, and the date it was added. This is the file to read if you want your stack to know the whole catalog.</dd>
 <dt><a href="/ledger.json">/ledger.json</a></dt>
 <dd>Every Cancel Ledger line as structured data.</dd>
+<dt><a href="/design-for-batch.md">/design-for-batch.md</a></dt><dd>A plain-text build brief for your AI: three layers, the batch cycle, autonomy, evolution and acceptance cases.</dd>
 <dt><a href="/sitemap.xml">/sitemap.xml</a></dt>
 <dd>Every page. Each page also carries its full text as structured data, so a stack that does not render pages can still read them.</dd>
 </dl>
