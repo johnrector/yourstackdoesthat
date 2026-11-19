@@ -12,7 +12,7 @@ Every Friday, the same numbers, the same shape, the same audience, and it still 
 A reporting or dashboard tool with a per-seat price, and the two hours anyway.
 
 ## Your stack does that
-On Friday at three it pulls the numbers from where they live, writes the report in the shape the audience expects, and leaves it for you to read and send.
+The batch assembles the current evidence, prepares the report for its audience and sends it by the agreed deadline under standing authority. It asks for review only when review was actually requested.
 
 ## How, in plain terms
-Connectors to the spreadsheet, the ledger, or whatever holds the numbers. A skill built from a few of your past reports. A scheduled task on Friday afternoon. The numbers stay where they live; nothing is copied into a new system. You read it once and send it.
+Connectors to the spreadsheet, the ledger, or whatever holds the numbers. A skill built from a few of your past reports. The central batch chooses and verifies the work against the reporting commitment. Source records remain available behind the report. A finite executor returns the actual send receipt; the next fresh assessment judges any response or remaining obligation.
