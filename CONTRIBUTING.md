@@ -55,6 +55,12 @@ One or two sentences, optional.
 
 `result` is `replaced` or `kept`. For a kept line, `replaced_by` holds the reason it was kept. Lines that say "kept" are welcome; they are the Stack Test working.
 
+## Operating recommendation
+
+Use [Design for Batch](https://yourstackdoesthat.com/design-for-batch/) for architecture examples: discovery, preparation, holistic reasoning, finite execution and receipts for the next fresh batch. Only calls and texts stay conversational from permitted preexisting CRM knowledge. All substantive work is batched; email has no live bypass.
+
+Describe finished work and actual outcomes, not merely a draft or dispatch. Let the assistant evolve its own CRM and learn general practices; avoid named-person patches. Preserve actual setup and access gaps. No independently continuing session per request or long-running business state machine.
+
 ## The rules
 
 - Provider-neutral. Never name a frontier stack as the one that does it. If only one can today, say "in some stacks" and describe what is needed.

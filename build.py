@@ -10,8 +10,7 @@ Reads:
 
 Writes everything into site/ which is what gets deployed.
 
-No server-side build is required. Run this on a laptop, commit site/,
-deploy site/. Python 3 standard library only.
+Netlify runs this build from Git. The generated site/ directory is not committed. Python 3 standard library only.
 """
 
 import html
@@ -30,17 +29,12 @@ REPO = "https://github.com/johnrector/yourstackdoesthat"
 
 NAV = [
     ("/", "Home"),
-    ("/idea/", "The idea"),
-    ("/stack/", "Your stack"),
-    ("/does/", "Does"),
-    ("/stack-test/", "The Stack Test"),
-    ("/ledger/", "Cancel Ledger"),
-    ("/companies/", "For companies"),
-    ("/contribute/", "Contribute"),
-    ("/check-back/", "Check back"),
+    ("/stack/", "The stack"),
+    ("/design-for-batch/", "Design for Batch"),
+    ("/does/", "The work"),
+    ("/stack-test/", "The test"),
     ("/reading/", "Reading"),
 ]
-
 DOMAINS = [
     ("household", "Household"),
     ("money", "Money"),
@@ -260,7 +254,8 @@ def layout(meta, body, jsonld, path):
 {body}
 </main>
 <footer class="site-foot">
-<p>Every word on this site, including the slogan, is released to the public domain under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>. Nobody owns this phrase, including us. Copy it, print it, say it.</p>
+<p>Our original text, including “Your stack does that,” is released to the public domain under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>. Copy it, print it, say it. Quoted material remains attributed to its source.</p>
+<p><a href="/idea/">The idea</a> · <a href="/companies/">For companies</a> · <a href="/contribute/">Contribute</a> · <a href="/ledger/">Historical Cancel Ledger</a></p>
 <p>No accounts, no tracking, no cookies, nothing for sale. Entries come from <a href="{REPO}">a public repository</a>. <a href="/check-back/">Have your stack check back</a> instead of subscribing.</p>
 <p>Maintained by <a href="https://johnrector.me/">John Rector</a>.</p>
 </footer>

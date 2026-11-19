@@ -1,0 +1,24 @@
+{
+  "illustrative_only": true,
+  "not_an_api_contract": true,
+  "assessment": "A proposal request is supported by the prior discussion and standing authority. A separate refund outcome remains unknown.",
+  "decisions": ["Prepare and send the proposal", "Investigate the current refund evidence"],
+  "assignments": [
+    {
+      "key": "example-proposal-for-current-request",
+      "purpose": "Prepare a thoughtful finished proposal and send it to the intended recipient within the existing scope and commercial authority.",
+      "capabilities": ["read_relevant_records", "send_email"],
+      "scope_bindings": {"recipient": "the verified requester", "project": "the project in the authenticated request"},
+      "delegated_details": "The executor chooses ordinary wording and structure from evidence.",
+      "receipt": "Actual delivery action, provider evidence, uncertainty and remaining work"
+    },
+    {
+      "key": "example-refund-evidence",
+      "purpose": "Read authorized order and refund evidence; report the current outcome without inventing completion.",
+      "capabilities": ["read_relevant_records"],
+      "scope_bindings": {"order": "the authenticated order under review"},
+      "receipt": "Sourced result or explicit failure/access gap"
+    }
+  ],
+  "batch_end": "End after finite assignments. Their receipts are knowledge for the next fresh batch, never a trigger to resume this plan."
+}

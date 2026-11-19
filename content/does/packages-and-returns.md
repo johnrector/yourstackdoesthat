@@ -12,7 +12,7 @@ Six things are on the way. One is late. One arrived wrong and can be returned fo
 A package-tracking app, often with a paid tier, that you fed tracking numbers or gave access to your inbox.
 
 ## Your stack does that
-It reads the order confirmations and shipping mail as they arrive, keeps a list of what is coming, flags anything late, and counts down return windows so you are told on day twenty-five, not day thirty-one.
+At a batch review it connects order confirmations, shipping updates and return deadlines with the rest of your situation. It takes the authorized next step and assesses the actual return or refund outcome in later fresh batches.
 
 ## How, in plain terms
-A connector to the mail account. A scheduled task each morning that scans for order, shipping, and delivery mail, updates one running list, and speaks up only when something is late or a return window is closing. Some carriers block automated lookups of their tracking pages; the mail is usually enough on its own.
+A connector to the mail account. A source collector supplies new order, shipping and delivery mail. The central batch reasoner assesses the knowledge, chooses finite work and records actual outcomes in its CRM. A refund does not require an external calendar participant. Some carriers block automated lookups of their tracking pages; the mail is usually enough on its own.

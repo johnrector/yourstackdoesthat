@@ -12,7 +12,7 @@ People want a slot. You want them to get one without a phone call and without do
 A booking app with a monthly plan and a link you put everywhere.
 
 ## Your stack does that
-When someone writes to ask, it offers the open slots, books the one they pick, confirms, and reminds them the day before.
+The next batch considers the request alongside outgoing replies, calendar facts and other commitments. It coordinates a suitable time, makes the authorized calendar change and confirms the actual outcome. Calls and texts can acknowledge the request immediately from existing CRM knowledge.
 
 ## How, in plain terms
-A connector to the calendar and to the mailbox. A skill for your hours and the rules. A scheduled task that watches for requests and sends reminders. Honest note: this works when customers write to you. If most of your customers arrive from a link and expect to click a time, a public booking page is a product you may still need, because their stacks are not booking yet. Run the [Stack Test](/stack-test/). It may say keep.
+A connector to the calendar and to the mailbox. Standing preferences and authority, an evolving CRM and a central batch reasoning cycle. Executors perform the chosen work and return receipts; the next fresh assessment decides what remains. Honest note: this works when customers write to you. If most of your customers arrive from a link and expect to click a time, a public booking page is a product you may still need, because their stacks are not booking yet. Run the [Stack Test](/stack-test/). It may say keep.
