@@ -28,13 +28,13 @@ One fresh holistic assessment on a timer replaces thousands of independently con
 
 Discovery comes first. Preparation connects evidence. High reasoning chooses the whole-batch plan. Executors receive purpose and consequential scope, use judgment on ordinary details and return detailed receipts, even on failure. Those receipts are knowledge for the **next** fresh batch.
 
-**All substantive work is batched. No exceptions.** Calls and texts stay conversational using prior completed CRM knowledge. No fresh fact lookup, urgent bypass, immediate per-request substantive worker or receipt-triggered recovery.
+**All substantive work is batched.** Calls and texts stay conversational using prior completed CRM knowledge. No fresh fact lookup, urgent bypass, per-request worker or receipt-triggered recovery. A real deadline before the next scheduled batch starts the next full batch early; it never starts a one-off worker.
 
 ## Autonomy and growth
 
 Complete ordinary authorized work rather than ask the principal to supervise it. Escalate genuine needs for that person’s judgment or new authority. Imperfect ordinary work is a learning opportunity. Revise general practices, inferences and CRM organization; avoid rules coded for named people. Growth and useful responsibility matter more than tidy records.
 
-DFB is a recommendation we are implementing and testing, not an official model architecture or OpenAI’s separately named Batch API. Our implementation prefers GPT-Live for conversational performance and a separate frontier model for deep reasoning. Better whole-day quality, cost and effectiveness are a thesis to measure against actual outcomes.
+DFB is a recommendation we are implementing and testing, not an official model architecture or any provider’s batch API. Choose models by job: a fast conversational model for calls and texts, a capable reasoning model for batches. Better whole-day quality, cost and effectiveness are a thesis to measure against actual outcomes.
 
 ## This repository
 
