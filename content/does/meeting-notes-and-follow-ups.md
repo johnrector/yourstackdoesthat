@@ -3,7 +3,7 @@ title: Meeting notes and the follow-ups that come out of them
 domain: work
 added: 2026-09-06
 uses: connector, skill, scheduled task
-setup: A connector to the calendar and to wherever recordings or transcripts land. The recording or transcript must actually be available, for example through the meeting platform or Plaud.
+setup: A connector to the calendar and to wherever recordings or transcripts land. The recording or transcript must actually be available, for example through the meeting platform or a recording device.
 ---
 ## The need
 What was said, what was decided, who owes what by when, and the three emails that should go out after.
